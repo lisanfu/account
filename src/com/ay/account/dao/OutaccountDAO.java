@@ -106,6 +106,31 @@ public class OutaccountDAO {
 			}
 			return  0;
 	}
+	/**
+	 * 查找支出信息
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public Tb_outaccount find(int id) {
+		db = helper.getWritableDatabase();// 初始化SQLiteDatabase对象
+		Cursor cursor = db
+				.rawQuery(
+						"select _id,money,time,type,address,mark from tb_outaccount where _id = ?",
+						new String[] { String.valueOf(id) });// 根据编号查找支出信息，并存储到Cursor类中
+		if (cursor.moveToNext())// 遍历查找到的支出信息
+		{
+			// 将遍历到的支出信息存储到Tb_outaccount类中
+			return new Tb_outaccount(
+					cursor.getInt(cursor.getColumnIndex("_id")),
+					cursor.getDouble(cursor.getColumnIndex("money")),
+					cursor.getString(cursor.getColumnIndex("time")),
+					cursor.getString(cursor.getColumnIndex("type")),
+					cursor.getString(cursor.getColumnIndex("address")),
+					cursor.getString(cursor.getColumnIndex("mark")));
+		}
+		return null;// 如果没有信息，则返回null
+	}
 	/*
 	 * 获取支出最大标号
 	 * @return

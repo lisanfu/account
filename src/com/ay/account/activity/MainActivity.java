@@ -55,7 +55,11 @@ public class MainActivity extends Activity
 					intent=new Intent(MainActivity.this,Outaccountinfo.class);
 					startActivity(intent);
 					break;
-				default :
+				case 3:
+					intent=new Intent(MainActivity.this,Inaccountinfo.class);
+					startActivity(intent);
+					break;
+				default:
 						finish();//
 				}
 			}

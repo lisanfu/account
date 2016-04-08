@@ -40,7 +40,6 @@ public class Outaccountinfo extends Activity {
 			}
 		});
 	}
-
 	private void ShowInfo(int intType) {// 用来根据传入的管理类型，显示相应的信息
 		String[] strInfos = null;// 定义字符串数组，用来存储支出信息
 		ArrayAdapter<String> arrayAdapter = null;// 创建ArrayAdapter对象

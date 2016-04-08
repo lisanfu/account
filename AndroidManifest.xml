@@ -26,6 +26,7 @@
         <activity android:name=".Outaccountinfo" />
          <activity android:name=".AddInaccount" />
          <activity android:name=".AddOutaccount" />
+         <activity android:name=".Inaccountinfo" />
        
     </application>
 
