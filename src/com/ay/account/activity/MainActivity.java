@@ -44,11 +44,19 @@ public class MainActivity extends Activity
 				switch(position)
 				{
 				case 0:
-					intent=new Intent(MainActivity.this,Outaccountinfo.class);
+					intent=new Intent(MainActivity.this,AddOutaccount.class);
 					startActivity(intent);
 					break;
 				case 1:
-					finish();//
+					intent=new Intent(MainActivity.this,AddInaccount.class);
+					startActivity(intent);
+					break;
+				case 2:
+					intent=new Intent(MainActivity.this,Outaccountinfo.class);
+					startActivity(intent);
+					break;
+				default :
+						finish();//
 				}
 			}
 			
