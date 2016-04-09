@@ -22,12 +22,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Outaccountinfo" />
-         <activity android:name=".AddInaccount" />
-         <activity android:name=".AddOutaccount" />
-         <activity android:name=".Inaccountinfo" />
-       
+         <activity android:name=".MainActivity"
+                  android:label="@string/app_name">
+        </activity>
+		<activity  android:name=".AddOutaccount">
+		</activity>
+		<activity  android:name=".AddInaccount">
+		</activity>
+		<activity  android:name=".Outaccountinfo">
+		</activity>
+		<activity  android:name=".Inaccountinfo">
+		</activity>
+		<activity  android:name=".Showinfo">
+		</activity>
+		<activity  android:name=".Sysset">
+		</activity>
+		<activity  android:name=".Accountflag">
+		</activity>
+		<activity  android:name=".InfoManage">
+		</activity>
+		<activity  android:name=".FlagManage">
+		</activity>
+		<activity  android:name=".Accountfalg">
+		</activity>
+        
     </application>
 
 </manifest>

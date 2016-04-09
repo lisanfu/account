@@ -1,7 +1,6 @@
 package com.ay.account.activity;
 import java.util.ArrayList;
 import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -59,8 +58,20 @@ public class MainActivity extends Activity
 					intent=new Intent(MainActivity.this,Inaccountinfo.class);
 					startActivity(intent);
 					break;
-				default:
-						finish();//
+				case 4:
+					intent = new Intent(MainActivity.this, Showinfo.class);// 使用Showinfo窗口初始化Intent
+					startActivity(intent);// 打开Showinfo
+					break;
+				case 5:
+					intent = new Intent(MainActivity.this, Sysset.class);// 使用Sysset窗口初始化Intent
+					startActivity(intent);// 打开Sysset
+					break;
+				case 6:
+					intent = new Intent(MainActivity.this, Accountfalg.class);// 使用Sysset窗口初始化Intent
+					startActivity(intent);// 打开Sysset
+					break;
+				case 7:
+					finish();
 				}
 			}
 			

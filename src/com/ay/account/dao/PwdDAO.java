@@ -13,6 +13,30 @@ public class PwdDAO {
 	{
 		helper=new DBOpenHelper(context);
 	}
+	/*添加密码
+	 * @param Tb_pwd
+	 * 
+	 * 
+	 * */
+	public void add(Tb_pwd tb_pwd)
+	{
+		db=helper.getWritableDatabase();
+		db.execSQL("insert into tb_pwd(password) values(?)",
+				new Object[]{tb_pwd.getPassword()});
+		
+	}
+	/*更新密码信息
+	 * @param tb_pwd
+	 * 
+	 * 
+	 * 
+	 * */
+	public void update(Tb_pwd tb_pwd)
+	{
+		db=helper.getWritableDatabase();
+		db.execSQL("update tb_pwd set password=?",
+				new Object[]{tb_pwd.getPassword()});
+	}
 	/*
 	 * 查找信息
 	 * @return
@@ -27,6 +51,11 @@ public class PwdDAO {
 		}
 		return null;
 	}
+	/*
+	 * 获得记录总数
+	 * @return
+	 * 
+	 * */
 	public long getCount()
 	{
 		db=helper.getWritableDatabase();
